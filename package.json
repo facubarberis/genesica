@@ -2,6 +2,9 @@
   "name": "genesica",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": "17.2.0"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
