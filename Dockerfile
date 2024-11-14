@@ -8,16 +8,16 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # Instalar las dependencias del proyecto
-RUN yarn install
+RUN npm install
 
 # Copiar todos los archivos del proyecto al contenedor
 COPY . .
 
 # Construir el proyecto para producción
-RUN yarn build
+RUN npm run build
 
 # Instalar un servidor estático para servir el contenido
-RUN yarn global add serve
+RUN npm install -g serve
 
 # Exponer el puerto 80
 EXPOSE 80
